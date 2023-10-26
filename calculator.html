@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1{
+background-color:pink;
+font-style:times new roman;
+color:yelloe;
+}
+div{
+background-color:orange;
+border:12px;
+padding:12px;
+width:300px;
+border-radius:20px;
+}
+table{
+border-spacing:30px;
+}
+body{
+background-color:yellow;
+}
+</style>
+<script>
+function operation(op){
+var n1=parseInt(document.getElementById("num1").value);
+var n2=parseInt(document.getElementById("num2").value);
+var result=0;
+if (op=="+"){
+result=n1+n2;
+}
+else if (op=="-"){
+result=n1-n2;
+}
+else if (op=="*"){
+result=n1*n2;
+}
+else if (op=="/"){
+result=n1/n2;
+}
+document.getElementById("res").value=result;
+}
+</script>
+</head>
+<body>
+<center>
+<h1>SIMPLE CALCULATOR</h1>
+<div>
+<table>
+<tr>
+<th>enter the first no:</th>
+<td><input type="number" id="num1"></td>
+</tr>
+<tr>
+<th>enter the second no:</th>
+<td><input type="number" id="num2"></td>
+</tr>
+<tr>
+<th>choose operation:</th>
+<td><input type="button" value="+" onclick="operation(this.value);">
+<input type="button" value="-" onclick="operation(this.value);">
+<input type="button" value="*" onclick="operation(this.value);">
+<input type="button" value="/" onclick="operation(this.value);"></td>
+</tr>
+<tr>
+<th>enter the result:</th>
+<td><input type="number" id="res"></td>
+</tr>
+</center>
+</table>
+</div>
+</body>
+</html>
